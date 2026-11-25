@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Ball Pool</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <main class="game-shell">
+        <header class="match-header">
+            <div class="player">
+                <div class="avatar avatar-blue">JP</div>
+                <div class="player-info">
+                    <strong>Você</strong>
+                    <span>12 bolas encaçapadas</span>
+                </div>
+            </div>
+
+            <div class="scoreboard">
+                <span class="match-label">PARTIDA</span>
+                <div class="score"><strong id="score">0</strong><b>×</b><strong>0</strong></div>
+            </div>
+
+            <div class="player player-right">
+                <div class="player-info">
+                    <strong>Mestre</strong>
+                    <span>IA · nível 10</span>
+                </div>
+                <div class="avatar avatar-gold">M</div>
+            </div>
+        </header>
+
+        <section class="table-wrapper">
+            <div class="table-rail">
+                <div class="corner corner-tl"></div>
+                <div class="corner corner-tr"></div>
+                <div class="corner corner-bl"></div>
+                <div class="corner corner-br"></div>
+
+                <canvas id="gameCanvas" width="900" height="500" aria-label="Mesa de sinuca"></canvas>
+
+                <div class="table-badge">8 BALL</div>
+            </div>
+        </section>
+
+        <footer class="game-footer">
+            <div class="balls-left">
+                <span>BOLAS RESTANTES</span>
+                <strong id="remaining">15</strong>
+            </div>
+
+            <div class="shot-controls">
+                <span class="control-label">FORÇA</span>
+                <input type="range" id="power" min="1" max="100" value="50" aria-label="Força da tacada">
+                <strong id="powerValue">50%</strong>
+            </div>
+
+            <button id="restart" type="button" title="Reiniciar partida">
+                <span>↻</span> Reiniciar
+            </button>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
